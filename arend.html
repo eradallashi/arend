@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AREND</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <style>
+        body{
+            margin: 0;
+            border-top: 15px solid black;
+            border-left: 15px solid black;
+            border-right: 15px solid black;
+        }
+        
+        main {
+        position: relative; 
+        background-image: url(ext.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow: hidden; /* Prevent content overflow */
+    }
+   
+
+   
+    .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Aligns items with space between them */
+            margin-left: 60px;
+            font-size: 22px;
+       
+        }
+        .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+   background-color: rgba(18, 17, 17, 0.9); 
+    
+    /* Add any additional styles for the fixed state */
+}
+    .arend {
+        font-family: 'Times New Roman', Times, serif;
+        display: inline-block;
+        margin: 0;
+       
+        color: white;
+    }
+    .line {
+        border: none;
+        border-top: 1px solid white;
+        width: 100%;
+        display: block;
+        margin: 0;
+        
+    }
+    .architecture {
+        font-family: 'Times New Roman', Times, serif;
+        display: inline-block;
+        margin: 0;
+        margin-top: 5px;
+        font-size: small;
+        color: white;
+    }
+    .phone {
+        font-size: 17px;
+        color: white;
+    }
+
+    
+    .menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+}
+
+.menu {
+  list-style-type: upper-roman;
+  padding: 50px; /* Add padding to the menu */
+}
+
+.menu li {
+  padding: 30px 10px; /* Adjust padding for more space between items */
+  background-color: #f4f4f4;
+}
+
+
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.a{
+    border :none;
+    color : black;
+    text-decoration: none;
+}
+
+
+.home{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+.cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+           
+           
+        }
+        .item {
+            text-align: center;
+            padding-top: 10px;
+           
+        }
+        .number {
+            font-size: 45px; /* Enlarged font size for numbers */
+           
+        }
+       
+    
+
+
+        .projektet{
+            background-color: #050505;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+    padding-top: 50px;
+        }
+        .ph {
+            box-sizing: border-box;
+            display: inline-block;
+            width: calc(30% - 40px); /* Adjust width as needed */
+            text-align: center;
+            margin: 20px; /* Add margin for spacing */
+            position: relative; /* Set position to relative */
+            margin-left: 50px;
+        }
+        .ph img {
+            height: 300px;
+            width: 100%; /* Ensure all images have the same width */
+            object-fit: cover; /* Ensure images maintain aspect ratio */
+            border-radius: 10px; /* Add rounded corners */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+        .ph p {
+            margin-top: 10px; /* Add margin above the text */
+        }
+        .ph:hover img {
+            transform: scale(1.1); /* Enlarge the image on hover */
+        }
+        .ph .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            display: none;
+            
+           
+        }
+        .ph:hover .info {
+           display: block; /* Show information on hover */
+          
+        }
+        .ph p{
+            text-align: left;
+        }
+
+
+
+
+
+        .swiper-container {
+    width: 100%;
+    height: 100%; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove padding */
+  
+}
+
+.swiper-slide img {
+    width: 50%; /* Ensure the width adjusts based on the image's aspect ratio */
+    height: auto; /* Ensure the height adjusts based on the image's aspect ratio */
+    max-width: 100%; /* Limit the maximum width to the container width */
+    max-height: 900px; /
+}
+
+        .info {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    display: block;
+    max-width: 90%; /* Adjust the maximum width as needed */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+        .procesi{
+            
+            font-size: 54px;
+            margin-top:0;
+            padding-left: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+          
+            color: black;
+            
+        }
+        .swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color:black;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+      
+    </style>
+     
+</head>
+<body>
+   <main>
+   
+    <div class="fixed" id="container">
+    <p style="text-align: right; color: white; margin-right: 30px;">Ready to Build Your Dream Home? Limited Availability for 2023 & 2024 -<b><a style="text-decoration: none; color: white;" href="request.html"> Request a Consultation </a></b></p>
+    
+    <div class="container">
+        <div>
+         
+            <h1 class="arend"><a style="color: white; text-decoration: none;" href="arend.html">AREND</a></h1>
+           <hr class="line">
+           <small class="architecture"><a style="color: white; text-decoration: none;" href="arend.html">ARCHITECTURAL DESIGN </a></small>
+        </div>
+      
+       <br><br><br><br> <p class="phone" style="margin-left: 600px;">+355 687558330</p>
+        
+        <br><br><button class="home" id="menu-toggle">&#8801;</button><br>
+  <div class="menu-overlay" id="menu-overlay">
+    <ol class="menu" id="menu">
+       
+      <li><a style="text-decoration: none; color: black;" href="#rreth">RRETH NESH</a></li>
+      <li><a style="text-decoration: none; color: black;" href="#portofoli">PORTOFOLIO</a></li>
+      <li><a style="text-decoration: none; color: black;" href="#persene">PERSE NE</a></li>
+      <li><a style="text-decoration: none; color: black;" href="#procesi">PROCESI PUNES</a></li>
+      <li><a style="text-decoration: none; color: black;" href="kontakti.html">KONTAKT</a></li>
+    
+    </ol>
+    <span class="close-button" id="close-button">×</span>
+  </div>
+  </div>
+ 
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('menu').addEventListener('click', function() {
+        // Trigger a click event on the close button
+        var closeButton = document.getElementById('close-button');
+        closeButton.click();
+    });
+</script>
+
+</div>
+<script>
+window.addEventListener('scroll', function() {
+    var container = document.getElementById('container');
+    if (window.scrollY > 0) {
+        container.classList.add('fixed');
+    } else {
+        container.classList.remove('fixed');
+    }
+});
+</script>
+
+
+ 
+  <br><br><br><br><br>
+  <br><br><br>
+  <h1 style="text-align: center; color: white;">Luxury Custom Home Builder & Residential Developer</h1>
+  <h3 style="text-align: center; color: white;">Making dream houses a reality & building award-winning communities that last </h3>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br>   <br>
+  <br><br><br><br><br><br>
+  
+    </main>
+  
+    <br><br><br><br><br>
+
+    <div class="cont">
+        <div class="item"><span id="number1" class="number">0</span><br>PROJEKTE TOTALE</div>
+        <div class="item"><span id="number2" class="number">0</span><br>PROJEKTE NDERKOMBETARE</div>
+        <div class="item"><span id="number3" class="number">0</span><br>PROJEKTE TE KOMPLETUARA</div>
+        <div class="item"><span id="number4" class="number">0</span><br>VITE EKSPERIENCE</div>
+        <div class="item"><span id="number5" class="number">0</span><br>PUBLIKIME</div>
+    </div>
+
+    
+    <br><br><br><br><br>
+
+    <script>
+        function animateNumbers(element, endValue, duration) {
+            let start = 0;
+            const increment = endValue / (duration * 1000 / 100); // Calculate increment per 100ms
+
+            function updateNumber() {
+                start += increment;
+                if (start >= endValue) {
+                    clearInterval(timer);
+                    start = endValue;
+                }
+                element.textContent = Math.floor(start);
+            }
+
+            const timer = setInterval(updateNumber, 100);
+            updateNumber();
+        }
+
+        // Start animating numbers
+        animateNumbers(document.getElementById('number1'), 45, 5);
+        animateNumbers(document.getElementById('number2'), 5, 5);
+        animateNumbers(document.getElementById('number3'), 35, 5);
+        animateNumbers(document.getElementById('number4'), 5, 5);
+        animateNumbers(document.getElementById('number5'), 8, 5);
+    </script>
+   
+
+   <div id="rreth">
+   <link rel="stylesheet" href="about.css">
+
+   <div class="header">ABOUT US</div>
+
+   <div class="content">
+       <img class="image" src="team.webp" alt="Team Image">
+       <div class="text">
+           <h2>AREND ARCHITECTURAL DESIGN</h2>
+           <p> 
+               We are a premier architectural design studio committed to excellence and innovation. With a focus on delivering exceptional design solutions tailored to our clients' needs, we strive to create spaces that inspire and elevate living and working environments.
+           </p>
+           <p>
+               Our team of talented professionals combines expertise with creativity to bring visions to life, ensuring every project reflects our dedication to quality and craftsmanship. From concept to completion, we are with you every step of the way, ensuring a seamless and rewarding experience.
+           </p>
+           
+           <a href="rrethnesh.html" class="button">Learn More</a>
+       </div>
+   </div>
+   <br><br><br><br><br>
+ 
+  </div>
+    
+<div id="portofoli">
+
+<h1 class="projektet" style="padding-top: 10%;">PROJEKTET TONA</h1>
+<div class="ph"> 
+    <img src="lion.jpeg" alt="LION PARK RESIDENCE TIRANE">
+    <div class="info">
+        <p>LION PARK RESIDENCE</p>
+        <p>TIRANE</p>
+        <p>270 sqm</p>
+        <hr>
+        <p><a style="border: none;color: white;" href="lionPark.html">Me shume</a></p>
+    </div>
+    <p style="padding: 20px;">LION PARK RESIDENCE<br>TIRANE</p>
+</div>
+<div class="ph">
+    <img src="longhill.jpg" alt="LONG HILL RESIDENCE TIRANE">
+    <div class="info">
+        <p>LONG HILL RESIDENCE</p>
+        <p>TIRANE</p>
+        <p>306 sqm</p>
+        <hr>
+        <p><a style="border: none;color: white;" href="longhill.html">Me shume</a></p>
+    </div>
+    <p style="padding: 20px;">LONG HILL RESIDENCE<br>TIRANE</p>
+</div>
+<div class="ph">
+    <img src="villavuno.jpg" alt="VILLA VUNO HIMARE">
+    <div class="info">
+        <p>VILLA VUNO</p>
+        <p>HIMARE</p>
+        <p>110 sqm</p>
+        <hr>
+        <p><a style="border: none;color: white;" href="villavuno.html">Me shume</a></p>
+    </div>
+    <p style="padding: 20px;">VILLA VUNO<br>HIMARE</p>
+</div>
+<div class="ph"> 
+    <img src="towerbridge.webp" alt="TOWER">
+    <div class="info">
+        <p>TOWER BRIDGE 3 RESIDENCE</p>
+        <p>TIRANE</p>
+        <p>146 sqm</p>
+        <hr>
+        <p><a style="border: none;color: white;" href="towerbridge.html">Me shume</a></p>
+    </div>
+    <p style="padding: 20px;">TOWER BRIDGE 3 RESIDENCE<br>TIRANE</p>
+</div>
+<div class="ph">
+    <img src="kodraediellit.webp" alt="REZIDENCA KODRA E DIELLIT">
+    <div class="info">
+        <p>REZIDENCA KODRA E DIELLIT</p>
+        <p>TIRANE</p>
+        <p>140 sqm</p>
+        <hr>
+        <p><a style="border: none;color: white;" href="kodradiellit.html">Me shume</a></p>
+    </div>
+    <p style="padding: 20px;">REZIDENCA KODRA E DIELLIT<br>TIRANE</p>
+</div>
+<div class="ph">
+    <img src="sinani.webp" alt="SINANI CONSTRUCTION">
+    <div class="info">
+        <p>SINANI CONSTRUCTION</p>
+        <p>ZOGU I ZI, TIRANE</p>
+        <p>177 sqm</p>
+        <hr>
+        <p><a style="border: none;color: white;" href="sinani.html">Me shume</a></p>
+    </div>
+    <p style="padding: 20px;">SINANI CONSTRUCTION<br>ZOGU I ZI, TIRANE</p>
+</div>
+</div>
+
+<div id="persene">
+<link rel="stylesheet" href="perseNe.css">
+
+<div class="ground">
+    <br><br>
+<h1 class="perse" >PERSE NE ?</h1>
+<br><br><hr>
+        
+        <ol class="custom-list">
+    <li><h2>TEKNOLOGJI TË REJA</h2>
+        <br>
+        <br>
+        Bota është vazhdimisht në zhvillim dhe paralelisht me të, edhe studioja jonë. Për realizimin e projekteve, ne përdorim teknologji dhe trende dizajni nga më të fundit, të cilat përmirësojnë komfortin dhe komoditetin e klientëve tanë.
+    </li>
+
+<li> <h2>E BUKURA = E PËRSHTATSHME/KOMFORTE</h2> 
+    Të gjithë mund të biem në konsensus se estetika eshtë një nga themelet e një dizajni të suksesshëm. Krahas së bukurës, një tjetër karakteristikë kyçe e dizajnit, është dhe komforti që duhet t’iu mundësojmë klientëve tanë.
+</li>
+
+<li> <h2>VËMENDJA NDAJ DETAJIT</h2>
+    Arkitektura dhe dizajni nuk kanë të bëjnë vetëm me krijmin e konceptit apo artikulimin e formës, por ajo që na karakterizon ne si studio, është vëmendja që kushtojmë ndaj detajeve, si në nivel ndërtese, ashtu edhe në nivel interiori.
+</li>
+
+<li>
+    <h2>CILËSIA E PUNËS </h2>
+Të gjitha hapat, në të cilat zhvillohet procesi i punës, janë të rëndësishme, e për këtë arsye, ne kontrollojmë cilesinë e punimeve në të gjitha fazat.
+</li>
+<li>
+   <h2>REZULTAT I GARANTUAR</h2> 
+Studioja jonë numëron një sërë projektesh të implementuara dhe të realizuara me përpikmëri, si në vizualizimet 3-dimensionale. Kjo është një tjetër pikë e fortë e jona: garantimi i rezultateve në mënyrën më cilësore të mundshme.
+</li>
+<li>
+  <h2> CIKËL I PLOTË SHËRBIMESH </h2> 
+Ne nuk limitohemi vetëm në artikulimin e koncept-ideve apo në projektim, sepse synimi ynë kryesor është të sjellim në jetë projektet tona.
+</li>
+</ol>
+</div>
+</div>
+
+<br><br><br><br>
+<br><br>
+<div id="procesi">
+<h1 class="procesi">PROCESI I PUNES </h1>
+<br><br><br><br>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                
+                <img src="procedura1.jpeg" alt="Photo 1">
+                <div class="info"><h3>KONTAKTIMI ME STUDION TONË</h3>
+                    <p>Ju mund te na kontaktoni ne te gjitha menyrat e kontaktit tonë, per të marre informacion
+                         te detajuar mbi procesin e punes, kostot, kohën e perfundimit, si dhe per implementimin e projektit ne realitet.</p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="deal.jpeg" alt="Photo 2">
+                <div class="info"><h3>BISEDE ME KLIENTIN DHE ARRITJA NË
+                    NJË MARREVESHJE</h3><p>
+                        Një hallke e rëndësishme e procesit eshtë biseda me klientin dhe
+arritja ne një marreveshje. I gjithe informacioni mbi hapat e
+procesit, kushtet dhe kostoja e sherbimit, zhvillimi i projektit, si dhe kushte të tjera reflektohen ne kontratë, e cila firmoset nga te dyja
+palët me marrëveshje.
+                    </p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="draws.webp" alt="Photo 3">
+                <div class="info"><h3>PREZANTIMI I PARE ME HAPESIREN</h3><p>
+                    E rëndësishme si fillim eshte dhe prezantimi i parë me hapësirën, ku
+                    se bashku me klientin vizitohet objekti dhe shkimbehen idete e para mbi projektin e ri.
+                    </p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="draws.webp" alt="Photo 4">
+                <div class="info"><h3>RILEVIMI I HAPËSIRËS</h3><p>
+                    Per të pergatitur vizatimet e gjendjes aktuale t hapësires,
+                    arkitektet tane kryejne vizita ne terren dhe bejne matje dhe fotograti per te patur sa me shume informacion nga objekti ku do të punohet. 
+                    Ky eshtë një hap shume themelor per mbarevajtjen e
+                    procesit te punës.
+                    </p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="projektimi.jpeg" alt="Photo 5">
+                <div class="info"><h3>ZGJIDHJET E PROJEKTIMIT</h3><p>
+                    Hapi i radhës eshte zhvillimi i disa varianteve per zgjidhjet e
+                    mundshme te hapësires që sugjerohen nga arkitekti. Nga variantet
+                    e prezantuara, ju do të zgjidhni te gjithe idete që preferoni, duke
+                    bërë komente apo shtesa, te cilat rezultojne ne zgjidhjen ideale
+                    të hapësires, duke marrë ne konsiderate te gjitha kerkesat dhe nevojat tuaja.
+                    </p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-slide">
+                <img  src="3D.jpg" alt="Photo 6">
+                <div class="info"><h3>VIZUALIZIME TREDIMENSIONALE (3D)
+                    REALISTIKE</h3><p>
+                        Në menyre qe ju te imagjinoni hapesiren tuaj te dizenjuar deri ne
+                        detaje, ne krijojme vizualizime tredimensionale te kompletuara me 
+                        te gjitha materialet, mobiljet, ndriçuesit e perzgjedhur.
+                    </p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-slide">
+                <img src="procesi1.jpeg" alt="Photo 7">
+                <div class="info"><h3>IMPLEMENTIMI I PROJEKTIT NË REALITET, SIC ESHTË I
+                    PARAQITUR NE VIZUALIZIME</h3><p>
+                        Per zbatimin e projektit, e cila eshtë një nga hallkat kyçe te
+                        këtij procesi, ne bashkëpunojme me ekipe konstruksioni
+                        profesioniste, si dhe bashkëpunojme drejtperdrejt me firmat qe
+                        operojne ne treg. Te gjithe procesit i kushtohet nje rendesi e
+                        veçante, në menyre që te arrihet finalizmi i projektit njësoj si
+                        ne vizualizimet qe ju jane paraqitur.
+                    </p></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+        </div>
+  
+       
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+    </script>
+
+    </div>
+    <br><br>
+
+  
+</body>
+</html>

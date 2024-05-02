@@ -1,0 +1,51 @@
+/* Apply styles to the custom list */
+.custom-list {
+    list-style-type:none; /* Remove default numbering */
+    padding-left: 20px; /* Remove default padding */
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+}
+
+/* Apply styles to the list items */
+.custom-list li {
+    width: 50%; /* Set each item to occupy half the width */
+    padding-top: 30px; /* Add padding to separate items */
+    padding-left: 70px;
+    padding-bottom: 30px;
+    padding-right: 70px;
+    box-sizing: border-box; /* Include padding in item width calculation */
+    animation: crush 2s ease forwards; /* Apply animation to each item */
+    color: white;
+    
+}
+
+/* Define keyframes for the animation */
+@keyframes crush {
+    0% {
+        transform: scale(1); /* Start with normal scale */
+    }
+    50% {
+        transform: scale(0.5); /* Half size */
+    }
+    100% {
+        transform: scale(1); /* Back to normal size */
+    }
+}
+
+.perse {
+    font-size: 54px;
+    margin-top: 20px;
+    padding-left: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+   
+    color: white;
+}
+.ground{
+    position: relative; 
+    background-image: url(final.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden; 
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn more</title>
+<style>
+    
+    body{
+            margin: 0;
+            border-top: 15px solid black;
+            border-left: 15px solid black;
+            border-right: 15px solid black;
+        }
+        
+        main {
+        position: relative; 
+        background-image: url(ext.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow: hidden; /* Prevent content overflow */
+    }
+   
+
+   
+    .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Aligns items with space between them */
+            margin-left: 60px;
+            font-size: 22px;
+       
+        }
+        .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+   background-color: rgba(18, 17, 17, 0.9); 
+    
+    /* Add any additional styles for the fixed state */
+}
+    .arend {
+        font-family: 'Times New Roman', Times, serif;
+        display: inline-block;
+        margin: 0;
+       
+        color: white;
+    }
+    .line {
+        border: none;
+        border-top: 1px solid white;
+        width: 100%;
+        display: block;
+        margin: 0;
+        
+    }
+    .architecture {
+        font-family: 'Times New Roman', Times, serif;
+        display: inline-block;
+        margin: 0;
+        margin-top: 5px;
+        font-size: small;
+        color: white;
+    }
+    .phone {
+        font-size: 17px;
+        color: white;
+    }
+
+    
+    .menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+}
+
+.menu {
+  list-style-type: upper-roman;
+  padding: 50px; /* Add padding to the menu */
+}
+
+.menu li {
+  padding: 30px 10px; /* Adjust padding for more space between items */
+  background-color: #f4f4f4;
+}
+
+
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.a{
+    border :none;
+    color : black;
+    text-decoration: none;
+}
+
+
+.home{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+.cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+           
+           
+        }
+       
+    
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        padding: 50px;
+    }
+
+    .image {
+        width: 45%;
+        border-radius: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image:hover {
+        transform: scale(1.05);
+    }
+
+    .text {
+        width: 50%;
+    }
+
+    .text h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .text p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .image,
+        .text {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+</head>
+<body>
+    <main>
+   
+        <div class="fixed" id="container">
+        <p style="text-align: right; color: white; margin-right: 30px;">Ready to Build Your Dream Home? Limited Availability for 2023 & 2024 -<b><a style="text-decoration: none; color: white;" href="request.html"> Request a Consultation </a></b></p>
+        
+        <div class="container">
+            <div>
+             
+                <h1 class="arend"><a style="color: white; text-decoration: none;" href="arend.html">AREND</a></h1>
+               <hr class="line">
+               <small class="architecture"><a style="color: white; text-decoration: none;" href="arend.html">ARCHITECTURAL DESIGN </a></small>
+            </div>
+          
+           <br><br><br><br> <p class="phone" style="margin-left: 600px;">+355 687558330</p>
+            
+            <br><br><button class="home" id="menu-toggle">&#8801;</button><br>
+      <div class="menu-overlay" id="menu-overlay">
+        <ol class="menu" id="menu">
+           
+          <li><a style="text-decoration: none; color: black;" href="#rreth">RRETH NESH</a></li>
+          <li><a style="text-decoration: none; color: black;" href="#portofoli">PORTOFOLIO</a></li>
+          <li><a style="text-decoration: none; color: black;" href="#persene">PERSE NE</a></li>
+          <li><a style="text-decoration: none; color: black;" href="#procesi">PROCESI PUNES</a></li>
+          <li><a style="text-decoration: none; color: black;" href="kontakti.html">KONTAKT</a></li>
+        
+        </ol>
+        <span class="close-button" id="close-button">×</span>
+      </div>
+      </div>
+     
+      <script src="script.js"></script>
+      <script>
+        document.getElementById('menu').addEventListener('click', function() {
+            // Trigger a click event on the close button
+            var closeButton = document.getElementById('close-button');
+            closeButton.click();
+        });
+    </script>
+    
+    </div>
+    <script>
+    window.addEventListener('scroll', function() {
+        var container = document.getElementById('container');
+        if (window.scrollY > 0) {
+            container.classList.add('fixed');
+        } else {
+            container.classList.remove('fixed');
+        }
+    });
+    </script>
+    
+    </main>
+
+    <div class="content">
+        <img class="image" src="team.webp" alt="Team Image">
+        <div class="text">
+            <h2>About Us</h2>
+            <p>
+                We are a premier architectural design studio committed to excellence and innovation. With a focus on delivering exceptional design solutions tailored to our clients' needs, we strive to create spaces that inspire and elevate living and working environments.
+            </p>
+            <p>
+                Our team of talented professionals combines expertise with creativity to bring visions to life, ensuring every project reflects our dedication to quality and craftsmanship. From concept to completion, we are with you every step of the way, ensuring a seamless and rewarding experience.
+            </p>
+       
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <h2>Our Services</h2>
+            <p>
+                We offer comprehensive architectural design services tailored to your unique needs, including conceptual design, architectural planning, interior and exterior design, project management, sustainability integration, client collaboration, and post-construction support. Our team is committed to delivering innovative solutions that exceed your expectations. 
+            <p>
+                Get in touch with us today to discover how we can bring your architectural vision to life.
+            </p>
+         
+        </div>
+        <img class="image" src="service.webp" alt="Services Image">
+    </div>
+
+    <div class="content">
+        <img class="image" src="ne.jpeg" alt="Projects Image">
+        <div class="text">
+            <h2>Our Projects</h2>
+            <p>
+                Our projects showcase a harmonious blend of creativity and functionality, delivering innovative architectural solutions tailored to our clients' unique needs. From residential spaces to commercial complexes, each project reflects our commitment to excellence and attention to detail. Explore our portfolio to witness the diversity and quality of our work firsthand.
+                </p>
+      
+        </div>
+    </div>
+</body>
+</html>
+
