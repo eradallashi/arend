@@ -20,7 +20,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        overflow: hidden; /* Prevent content overflow */
+        overflow: hidden; 
     }
    
 
@@ -28,7 +28,7 @@
     .container {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Aligns items with space between them */
+            justify-content: space-between; 
             margin-left: 60px;
             font-size: 22px;
        
@@ -41,7 +41,7 @@
     z-index: 1000;
    background-color: rgba(18, 17, 17, 0.9); 
     
-    /* Add any additional styles for the fixed state */
+    
 }
     .arend {
         font-family: 'Times New Roman', Times, serif;
@@ -79,16 +79,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+  background-color: rgba(255, 255, 255, 0.9); 
 }
 
 .menu {
   list-style-type: upper-roman;
-  padding: 50px; /* Add padding to the menu */
+  padding: 50px; 
 }
 
 .menu li {
-  padding: 30px 10px; /* Adjust padding for more space between items */
+  padding: 30px 10px;
   background-color: #f4f4f4;
 }
 
@@ -130,7 +130,7 @@
            
         }
         .number {
-            font-size: 45px; /* Enlarged font size for numbers */
+            font-size: 45px; 
            
         }
        
@@ -152,24 +152,24 @@
         .ph {
             box-sizing: border-box;
             display: inline-block;
-            width: calc(30% - 40px); /* Adjust width as needed */
+            width: calc(30% - 40px); 
             text-align: center;
-            margin: 20px; /* Add margin for spacing */
-            position: relative; /* Set position to relative */
+            margin: 20px; 
+            position: relative; 
             margin-left: 50px;
         }
         .ph img {
             height: 300px;
-            width: 100%; /* Ensure all images have the same width */
-            object-fit: cover; /* Ensure images maintain aspect ratio */
-            border-radius: 10px; /* Add rounded corners */
-            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            width: 100%; 
+            object-fit: cover; 
+            border-radius: 10px; 
+            transition: transform 0.3s ease; 
         }
         .ph p {
-            margin-top: 10px; /* Add margin above the text */
+            margin-top: 10px; 
         }
         .ph:hover img {
-            transform: scale(1.1); /* Enlarge the image on hover */
+            transform: scale(1.1); 
         }
         .ph .info {
             position: absolute;
@@ -184,7 +184,7 @@
            
         }
         .ph:hover .info {
-           display: block; /* Show information on hover */
+           display: block; 
           
         }
         .ph p{
@@ -197,7 +197,7 @@
 
         .swiper-container {
     width: 100%;
-    height: 100%; /* Adjust the height as needed */
+    height: 100%;
     overflow: hidden;
 }
 
@@ -208,14 +208,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0; /* Remove padding */
+    padding: 0; 
   
 }
 
 .swiper-slide img {
-    width: 50%; /* Ensure the width adjusts based on the image's aspect ratio */
-    height: auto; /* Ensure the height adjusts based on the image's aspect ratio */
-    max-width: 100%; /* Limit the maximum width to the container width */
+    width: 50%; 
+    height: auto; 
+    max-width: 100%; 
     max-height: 900px; /
 }
 
@@ -227,9 +227,9 @@
     text-align: center;
     color: #fff;
     display: block;
-    max-width: 90%; /* Adjust the maximum width as needed */
+    max-width: 90%; 
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
         .procesi{
@@ -306,7 +306,7 @@
   <script src="script.js"></script>
   <script>
     document.getElementById('menu').addEventListener('click', function() {
-        // Trigger a click event on the close button
+    
         var closeButton = document.getElementById('close-button');
         closeButton.click();
     });
@@ -352,7 +352,7 @@ window.addEventListener('scroll', function() {
     <script>
         function animateNumbers(element, endValue, duration) {
             let start = 0;
-            const increment = endValue / (duration * 1000 / 100); // Calculate increment per 100ms
+            const increment = endValue / (duration * 1000 / 100); 
 
             function updateNumber() {
                 start += increment;
@@ -367,7 +367,7 @@ window.addEventListener('scroll', function() {
             updateNumber();
         }
 
-        // Start animating numbers
+        
         animateNumbers(document.getElementById('number1'), 45, 5);
         animateNumbers(document.getElementById('number2'), 5, 5);
         animateNumbers(document.getElementById('number3'), 35, 5);
@@ -511,6 +511,7 @@ Ne nuk limitohemi vetëm në artikulimin e koncept-ideve apo në projektim, seps
 
 <br><br><br><br>
 <br><br>
+<div>
 <div id="procesi">
 <h1 class="procesi">PROCESI I PUNES </h1>
 <br><br><br><br>
@@ -599,10 +600,10 @@ palët me marrëveshje.
        
     </div>
 
-    <!-- Swiper JS -->
+   
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper
+     
         var swiper = new Swiper('.swiper-container', {
             navigation: {
                 nextEl: '.swiper-button-next',
@@ -613,8 +614,9 @@ palët me marrëveshje.
     </script>
 
     </div>
-    <br><br>
+    </div>
+    <br><br><br><br>
 
-  
+   
 </body>
 </html>

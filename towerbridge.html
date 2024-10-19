@@ -20,7 +20,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
-            overflow: hidden; /* Prevent content overflow */
+            overflow: hidden; 
             animation: zoomInOut 10s infinite alternate;
             
         }
@@ -31,10 +31,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(80, 79, 79, 0.5); /* Grey overlay color with 50% opacity */
-    mix-blend-mode: overlay; /* Blend mode to apply the effect */
-}
- 
+    background-color: rgba(80, 79, 79, 0.5); 
+    mix-blend-mode: overlay; 
+        }
 
         @keyframes zoomInOut {
             0% {
@@ -51,7 +50,7 @@
         .container {
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Aligns items with space between them */
+            justify-content: space-between; 
             margin-left: 60px;
             font-size: 22px;
         }
@@ -63,7 +62,7 @@
             width: 100%;
             z-index: 1000;
             background-color: rgba(28, 28, 28, 0.9); 
-            /* Add any additional styles for the fixed state */
+           
         }
 
         .arend {
@@ -102,16 +101,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+            background-color: rgba(255, 255, 255, 0.9); 
         }
 
         .menu {
             list-style-type: upper-roman;
-            padding: 50px; /* Add padding to the menu */
+            padding: 50px; 
         }
 
         .menu li {
-            padding: 30px 10px; /* Adjust padding for more space between items */
+            padding: 30px 10px; 
             background-color: #f4f4f4;
         }
 
@@ -141,8 +140,7 @@
     text-decoration: bold;
   
     position: absolute;
-    bottom: 10px; /* Adjust this value as needed */
-    left: 50%;
+    bottom: 10px; 
     transform: translateX(-50%);
     padding-left: 20px;
     color: white;
@@ -158,18 +156,18 @@
 
         
 .img-container {
-    display: flex; /* Use flexbox for flexible layout */
-    flex-wrap: wrap; /* Allow images to wrap to the next row */
+    display: flex; 
+    flex-wrap: wrap; 
 }
 
 .img {
-    height: auto; /* Allow images to adjust height based on aspect ratio */
-    width: 50%; /* Set width to 50% for two images per row */
-    max-width: 100%; /* Ensure images don't exceed 100% of their container */
-    object-fit: cover; /* Ensure images maintain aspect ratio */
-    border-radius: 10px; /* Add rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    height: auto; 
+    width: 50%; 
+    max-width: 100%; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
+    box-sizing: border-box; 
     padding: 5px; /* Add padding to create space between images */
 }
 
@@ -213,7 +211,7 @@
       <script src="script.js"></script>
       <script>
         document.getElementById('menu').addEventListener('click', function() {
-            // Trigger a click event on the close button
+      
             var closeButton = document.getElementById('close-button');
             closeButton.click();
         });
